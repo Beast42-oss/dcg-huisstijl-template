@@ -97,6 +97,32 @@
 />
 ```
 
+### Timeline
+
+Gebruik een tijdlijn voor chronologische informatie. Beschikbaar in verticale en horizontale variant.
+
+```tsx
+// Verticale tijdlijn
+<Timeline 
+  brand="vijfhart"
+  items={[
+    { date: "Jan 2026", title: "Start project", highlight: true },
+    { date: "Feb 2026", title: "Fase 1 afgerond" },
+    { date: "Mrt 2026", title: "Livegang", highlight: true },
+  ]}
+/>
+
+// Horizontale tijdlijn (voor presentaties)
+<HorizontalTimeline 
+  brand="dcg"
+  items={[
+    { date: "Q1", title: "Planning" },
+    { date: "Q2", title: "Ontwikkeling", highlight: true },
+    { date: "Q3", title: "Livegang" },
+  ]}
+/>
+```
+
 ### Footer
 
 ```tsx
