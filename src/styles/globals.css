@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Lato:wght@400;700&family=Nothing+You+Could+Do&family=Playfair+Display:wght@700&display=swap');
+
+/* === CSS VARIABELEN VOOR MERKEN === */
+
+/* Vijfhart (standaard) */
+:root {
+  --brand-primary: #E30613;
+  --brand-secondary: #FFFFFF;
+  --brand-accent: #E30613;
+  --brand-text: #636467;
+  --brand-text-light: #CCCDCD;
+}
+
+/* DCG */
+[data-brand="dcg"] {
+  --brand-primary: #4A2572;
+  --brand-secondary: #FFFFFF;
+  --brand-accent: #FBBB00;
+  --brand-text: #4A2572;
+  --brand-text-light: #9889B3;
+}
+
+/* === BASIS STIJLEN === */
+
+body {
+  @apply font-sans text-vijfhart-anthracite antialiased;
+}
+
+[data-brand="dcg"] body {
+  @apply font-lato;
+}
+
+/* === TYPOGRAFIE === */
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+[data-brand="dcg"] h1,
+[data-brand="dcg"] h2 {
+  @apply font-playfair;
+}
+
+/* === VIJFHART SPECIFIEK: "Klopt!" STYLING === */
+
+.vijfhart-klopt {
+  @apply font-bold;
+  font-size: 1.15em;
+}
+
+.vijfhart-klopt::after {
+  content: "!";
+}
+
+/* === DCG SPECIFIEK: HANDGESCHREVEN TEKST === */
+
+.dcg-handwriting {
+  font-family: 'Nothing You Could Do', cursive;
+  @apply text-dcg-yellow;
+}
+
+/* === UTILITY CLASSES === */
+
+.section-padding {
+  @apply py-section px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding-lg {
+  @apply py-section-lg px-4 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply max-w-4xl mx-auto;
+}
+
+.container-wide {
+  @apply max-w-7xl mx-auto;
+}
+
+/* === ANIMATIES === */
+
+.animate-on-scroll {
+  @apply opacity-0 translate-y-4 transition-all duration-500;
+}
+
+.animate-on-scroll.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+/* === FOCUS STATES (TOEGANKELIJKHEID) === */
+
+:focus-visible {
+  @apply outline-none ring-2 ring-offset-2;
+}
+
+[data-brand="vijfhart"] :focus-visible {
+  @apply ring-vijfhart-red;
+}
+
+[data-brand="dcg"] :focus-visible {
+  @apply ring-dcg-purple;
+}
