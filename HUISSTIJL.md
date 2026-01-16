@@ -34,14 +34,14 @@
 - **"Klopt!":** Altijd in bold, met uitroepteken, 2-4pt groter dan volgende tekst
 
 ### DCG
-- **Koppen:** Playfair Display Bold (700)
-- **Body:** Lato Regular (400)
-- **Handgeschreven:** Nothing You Could Do (voor "House of Ambition")
+- **Koppen:** Kanit SemiBold (600)
+- **Body:** Kanit Regular (400)
+- **Handgeschreven:** Caveat Bold (700) (voor "House of Ambition")
 
 ### Google Fonts Import
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Lato:wght@400;700&family=Nothing+You+Could+Do&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Kanit:wght@400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
 ```
 
 ---

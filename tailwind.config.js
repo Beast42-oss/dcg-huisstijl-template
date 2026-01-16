@@ -1,82 +1,47 @@
-/** @type {import("tailwindcss").Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,html}",
+    "./index.html",
+  ],
   theme: {
     extend: {
       colors: {
-        // === VIJFHART HUISSTIJL ===
-        "vijfhart": {
-          "red": "#E30613",
-          "white": "#FFFFFF",
-          "anthracite": "#636467",
-          "grey": "#CCCDCD",
+        // ===== DE COMPLEMENTAIR GROEP (DCG) =====
+        dcg: {
+          paars: '#4A2572',        // Hoofdkleur
+          geel: '#FBBB00',         // Accentkleur
+          lichtpaars: '#9889B3',   // Ondersteunend
+          wit: '#FFFFFF',
+          antraciet: '#636467',
         },
-
-        // === DCG HUISSTIJL ===
-        "dcg": {
-          "purple": "#4A2572",
-          "yellow": "#FBBB00",
-          "light-purple": "#9889B3",
-        },
-
-        // === GENERIEKE KLEUREN ===
-        "brand": {
-          "primary": "var(--brand-primary)",
-          "secondary": "var(--brand-secondary)",
-          "accent": "var(--brand-accent)",
-          "text": "var(--brand-text)",
-          "text-light": "var(--brand-text-light)",
+        // ===== VIJFHART =====
+        vijfhart: {
+          rood: '#E30613',         // Hoofdkleur
+          wit: '#FFFFFF',          // Tekst op rood
+          antraciet: '#636467',    // Lopende tekst
+          middengrijs: '#CCCDCD',  // Ondersteunend
         },
       },
-
       fontFamily: {
-        // Vijfhart
-        "sans": ["Open Sans", "sans-serif"],
+        // ===== DCG TYPOGRAFIE =====
+        'dcg-heading': ['Kanit', 'sans-serif'],     // Koppen en subtitels (SemiBold 600)
+        'dcg-body': ['Kanit', 'sans-serif'],        // Platte tekst (Regular 400)
+        'dcg-handwritten': ['Caveat', 'cursive'],   // Vrijstaande koptekst (Bold 700)
         
-        // DCG
-        "lato": ["Lato", "sans-serif"],
-        "playfair": ["Playfair Display", "serif"],
-        "handwriting": ["Nothing You Could Do", "cursive"],
+        // ===== VIJFHART TYPOGRAFIE =====
+        'vijfhart-heading': ['Open Sans', 'sans-serif'],  // Koppen (Bold 700)
+        'vijfhart-body': ['Open Sans', 'sans-serif'],     // Lopende tekst (Regular 400)
       },
-
+      fontWeight: {
+        'dcg-semibold': '600',
+        'dcg-regular': '400',
+        'dcg-bold': '700',
+      },
       borderRadius: {
-        "vijfhart": "0.375rem",
-        "dcg": "0.5rem",
-      },
-
-      boxShadow: {
-        "card": "0 2px 8px rgba(0, 0, 0, 0.08)",
-        "card-hover": "0 4px 16px rgba(0, 0, 0, 0.12)",
-        "button": "0 2px 4px rgba(0, 0, 0, 0.1)",
-      },
-
-      spacing: {
-        "section": "4rem",
-        "section-lg": "6rem",
-      },
-
-      fontSize: {
-        "hero": ["3.5rem", { lineHeight: "1.1", fontWeight: "700" }],
-        "title": ["2.25rem", { lineHeight: "1.2", fontWeight: "700" }],
-        "subtitle": ["1.5rem", { lineHeight: "1.3", fontWeight: "600" }],
-      },
-
-      animation: {
-        "fade-in": "fadeIn 0.3s ease-in-out",
-        "slide-up": "slideUp 0.4s ease-out",
-      },
-
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
+        'vijfhart': '0.375rem',   // 3-5mm afgeronde hoeken
       },
     },
   },
   plugins: [],
-};
+}
